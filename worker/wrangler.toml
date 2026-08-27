@@ -9,7 +9,7 @@ bucket_name = "what-the-corpus"
 
 [vars]
 # Browsers that may call the endpoint. The site is served from GitHub Pages.
-ALLOWED_ORIGINS = "https://omer-kurtulus.github.io"
+ALLOWED_ORIGINS = "https://omer-kurtulus.github.io,http://localhost:8899,http://127.0.0.1:8899"
 
 # Secrets are NOT set here. Run these once:
 #   npx wrangler secret put SIGNING_SECRET     (any long random string)
