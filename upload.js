@@ -36,7 +36,7 @@ function isNetworkError(err) {
     const el = document.createElement('div');
     el.className = 'note';
     el.innerHTML = '<p><strong>Heads up.</strong> ' + BLOCKED_MSG
-      + ' <a href="mailto:okurtul@bgsu.edu">okurtul@bgsu.edu</a></p>';
+      + ' <a href="mailto:contact@omerkurtulus.com">contact@omerkurtulus.com</a></p>';
     const form = document.querySelector('form.submit');
     if (form) form.parentNode.insertBefore(el, form);
   }
@@ -150,7 +150,7 @@ form.addEventListener('submit', async (e) => {
     say(`<div class="note">
       <p><strong>That did not go through.</strong> ${isNetworkError(err) ? BLOCKED_MSG : esc(err.message || err)}</p>
       <p>Nothing is lost — try Send again. If it keeps failing, email the files to
-      <a href="mailto:okurtul@bgsu.edu">okurtul@bgsu.edu</a> and I will sort it out.</p>
+      <a href="mailto:contact@omerkurtulus.com">contact@omerkurtulus.com</a> and I will sort it out.</p>
       </div>`);
   }
 });
