@@ -72,7 +72,9 @@
   <label class="check"><input type="checkbox" name="wantsPatcher">
     <span>Send me the Max patcher and the technical detail too.</span></label>
 
-  <div id="turnstile-slot"></div>
+  <div id="turnstile-slot">
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAAEdqkpdzjcOvmb8K" data-theme="auto"></div>
+  </div>
 
   <p style="margin-top:1.8rem">
     <button class="btn" type="submit" id="regGo">Send this</button>
@@ -100,6 +102,7 @@
   Questions: <a href="mailto:okurtul@bgsu.edu">okurtul@bgsu.edu</a></p>
 </footer>
 
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <script src="./register.js"></script>
 </div>
 </body>

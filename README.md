@@ -61,27 +61,34 @@ submissions/<id>/audio/01-name.wav     the files
 submissions/<id>/submission.json       metadata, written once every file lands
 ```
 
-### Deploying the Worker
+The Worker is live at
+`https://what-the-corpus.what-the-corpus-worker.workers.dev` and the Turnstile
+widget (`0x4AAAAAAEdqkpdzjcOvmb8K`, managed mode, locked to
+`omer-kurtulus.github.io`) is wired into both forms.
+
+Verified end to end on 27 August 2026: a 90 MB WAV went up in three parts and
+came back out of R2 with a matching SHA-256.
+
+### Redeploying the Worker
 
 ```bash
 cd worker
 npm install
-npx wrangler login                     # once, interactive
-npx wrangler r2 bucket create what-the-corpus
-npx wrangler secret put SIGNING_SECRET # any long random string
 npx wrangler deploy
 ```
 
-Optional secrets:
+`wrangler login` must be run in a real terminal, not through an agent — the
+OAuth flow needs a TTY to open the browser and hold the callback open.
 
-- `TURNSTILE_SECRET` — enables the bot check. **While it is unset the check is
-  skipped**, which is fine for a quiet call and wrong once the link is public.
-- `NOTIFY_WEBHOOK` — a Slack or Discord webhook; you get a message per
-  submission instead of having to look.
+`SIGNING_SECRET` and `TURNSTILE_SECRET` are already set. One optional secret is
+not:
 
-Then set the Worker URL in the two clients. Both read `window.WTC_API` and fall
-back to a default at the top of the file — edit `upload.js` and `register.js` if
-the deployed name differs.
+- `NOTIFY_WEBHOOK` — a Slack or Discord webhook. Without it, nothing tells you a
+  submission arrived; you have to look in the bucket.
+
+To test the upload path without a browser, swap in Cloudflare's always-passing
+Turnstile secret (`1x0000000000000000000000000000000AA`), run the test, then put
+the real one back — `wrangler turnstile widget get <sitekey> --json` returns it.
 
 `ALLOWED_ORIGINS` in `wrangler.toml` must list the site's origin or the browser
 will block the request.

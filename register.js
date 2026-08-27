@@ -1,6 +1,6 @@
 /* What the C*rp*s — "Take part". No files here, so one small POST is enough. */
 
-const API = window.WTC_API || 'https://what-the-corpus.omer-kurtulus.workers.dev';
+const API = window.WTC_API || 'https://what-the-corpus.what-the-corpus-worker.workers.dev';
 
 const form = document.getElementById('reg');
 const status = document.getElementById('regStatus');

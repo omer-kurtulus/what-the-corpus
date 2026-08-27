@@ -128,7 +128,9 @@
       <span>Send me the patcher and the technical detail.</span></label>
   </fieldset>
 
-  <div id="turnstile-slot"></div>
+  <div id="turnstile-slot">
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAAEdqkpdzjcOvmb8K" data-theme="auto"></div>
+  </div>
 
   <p style="margin-top:1.8rem">
     <button class="btn" type="submit" id="go">Send</button>
@@ -152,6 +154,7 @@
   Questions: <a href="mailto:okurtul@bgsu.edu">okurtul@bgsu.edu</a></p>
 </footer>
 
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <script src="./upload.js"></script>
 </div>
 </body>

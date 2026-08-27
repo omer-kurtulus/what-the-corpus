@@ -8,7 +8,7 @@
  * Flow:  POST /create  ->  PUT /part (xN per file)  ->  POST /complete
  */
 
-const API = window.WTC_API || 'https://what-the-corpus.omer-kurtulus.workers.dev';
+const API = window.WTC_API || 'https://what-the-corpus.what-the-corpus-worker.workers.dev';
 
 const PART = 32 * 1024 * 1024;              // 32 MB — R2 needs >=5 MB per part
 const OK_EXT = ['wav', 'aif', 'aiff', 'flac'];
