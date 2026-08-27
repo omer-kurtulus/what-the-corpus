@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — What the C*rp*s</title>
+<meta name="description" content="An album built from recordings sent by other people, played through a machine-listening system. Open call for contributions.">
+<link rel="stylesheet" href="./style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Crect x='6' y='14' width='4' height='4' fill='%23fff'/%3E%3Crect x='14' y='14' width='4' height='4' fill='%23fff'/%3E%3Crect x='22' y='14' width='4' height='4' fill='%23fff'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site">
+  <a class="brand" href="./index.html">What the C*rp*s</a>
+  <p class="tagline">An album built from recordings sent by other people. Send yours by 30 November 2026; the record comes out on Bandcamp in February 2027, with everyone named.</p>
+  <nav class="tabs">
+    <a href="./index.html" aria-current="page">About</a>
+    <a href="./record.html">Record</a>
+    <a href="./take-part.html">Take part</a>
+    <a href="./upload.html">Send files</a>
+    <a href="./rights.html">Rights</a>
+    <a href="./contributors.html">Contributors</a>
+  </nav>
+</header>
+
+<main>
+<h1>Send a sound. It becomes part of what the system can say.</h1>
+
+<p class="lead">I am making an album called <em>What the C*rp*s</em>. Its material will not come from a sample library. It will come from people who agree to be in it.</p>
+
+<p>This site is the invitation, the instructions and the place to upload. It takes about ten minutes to take part, and you do not need to be a musician.</p>
+
+<div class="note">
+  <p><strong>Deadline 30 November 2026.</strong> The album is released on Bandcamp in <strong>February 2027</strong>, and every single person who contributes a recording is named in the credits — however small the contribution.</p>
+</div>
+
+<h2>What a corpus is</h2>
+
+<p>A corpus is a body of recorded sound cut into slices and measured one slice at a time — pitch, brightness, spectral shape. It is not a playlist and not a sample pack. It is the pool of material a listening system is allowed to reach into.</p>
+
+<p>I work with <strong>Somax2</strong>, developed at IRCAM. It listens continuously to an incoming sound and, in real time, searches the corpus for slices that resemble what it is hearing, then plays them — in an order the corpus never had. It does not play your recording back. It takes its shape apart and answers in whatever else is in the pool.</p>
+
+<p>So the corpus is the instrument. Whatever goes into it is the full extent of what the system can say. Right now I am building it, and that is what I am asking you for.</p>
+
+<h2>What happens to your recording</h2>
+
+<ol class="steps">
+  <li><b>Cut</b>Your file is sliced at its attacks. Each slice becomes one usable fragment — roughly half a second to five.</li>
+  <li><b>Analyse</b>Every slice is measured: pitch, pitch class, spectral shape. That measurement is the only way the system knows the slice exists.</li>
+  <li><b>Navigate</b>A driving sound is fed in live. The system matches it against the corpus and plays the closest slices it can find.</li>
+  <li><b>Fix</b>One continuous pass is recorded, then edited and mastered. That take becomes a track.</li>
+</ol>
+
+<p>Two rules fall out of steps 1 and 2, and they are the reason the <a href="./record.html">recording notes</a> say what they say: <strong>a slice with no attack never gets cut</strong>, and <strong>a slice with a chopped tail gets measured as something it is not</strong>. Dry, spaced, and left to ring. Everything else is taste.</p>
+
+<h2>What I am asking for</h2>
+
+<p>Recordings. <strong>They do not have to be instruments.</strong> If you make sound with objects — metal, wood, glass, paper, stone, water, springs, boxes, junk, whatever is in the room — you are not a second-best contributor here. You are exactly who I am asking. Some of the most useful material in a corpus has never been near a concert hall.</p>
+
+<p>Extended techniques are just as welcome: bowing something not meant to be bowed, scraping, rubbing, preparing, striking, blowing across rather than into. Voice and breath too.</p>
+
+<p><strong>Augmented instruments — a standing interest.</strong> If you play something you have extended yourself, with sensors, pickups, preparations, feedback, motors, a hybrid of acoustic body and electronics, I would particularly like to hear from you. Not only for a recording: if you want to work on something together around an augmented instrument, say so and we will talk. That is an open door rather than a one-off ask.</p>
+
+<p><strong>There is no notation to follow.</strong> You do not need to read music, and you do not need a brief. If a blank page is unhelpful I will happily write you one — a page of shapes and words, made for whatever you actually have to hand — but it is an offer, not a requirement. Most of the time the better move is that you send what you already do, and I work from that.</p>
+
+<p><a class="btn" href="./take-part.html">Take part →</a>
+<a class="btn btn--ghost" href="./upload.html" style="margin-left:.6rem">Already recorded? Send files →</a></p>
+
+<h2>Where it stands</h2>
+
+<p>Some pieces exist already. I made them to find out whether the idea holds, and their corpora came from Creative Commons recordings on Freesound — a dripping tap, bowed crotales, a prepared piano somebody else recorded years ago. They work. They are also, in a way I cannot argue myself out of, made from other people's leftovers.</p>
+
+<p><strong>That is the part I want to replace.</strong> A corpus built from people who agreed to be in it is a different object from one built out of search results. These tracks are the proof of concept; the album should be the real thing.</p>
+
+<p><a href="https://soundcloud.com/mer-kurtulu-399116903/sets/what-the-crps" rel="noopener">Listen to the studies on SoundCloud →</a></p>
+
+<h2>For the curious</h2>
+
+<p>The Max patcher I use, exactly as it runs. It needs Max 9 and the Somax 2.7 package installed — without them it will open but do nothing useful.</p>
+
+<p>This is one of several. Others are in progress for this album — different routings, different weightings, some built around a particular kind of source rather than a general corpus — and as they settle I will put them here too. If you are the sort of person who would rather read the patch than the description, tell me and I will send whatever is current, finished or not.</p>
+
+<p><a class="btn btn--ghost" href="./SomaxVocalMorph_V2.maxpat" download>Download the patcher →</a></p>
+
+<p class="small dim">Ask me anything about how it works. I would rather explain it than have it look like a trick.</p></main>
+
+<footer class="site">
+  <p>What the C*rp*s — an album by Ömer Kurtuluş, made with Somax2 (IRCAM).<br>
+  Questions: <a href="mailto:okurtul@bgsu.edu">okurtul@bgsu.edu</a></p>
+</footer>
+
+</div>
+</body>
+</html>

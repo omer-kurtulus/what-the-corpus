@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Upload — What the C*rp*s</title>
+<meta name="description" content="Send your recordings for the corpus. Files upload straight to the project storage; there is no size limit.">
+<link rel="stylesheet" href="./style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Crect x='6' y='14' width='4' height='4' fill='%23fff'/%3E%3Crect x='14' y='14' width='4' height='4' fill='%23fff'/%3E%3Crect x='22' y='14' width='4' height='4' fill='%23fff'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site">
+  <a class="brand" href="./index.html">What the C*rp*s</a>
+  <p class="tagline">An album built from recordings sent by other people. Send yours by 30 November 2026; the record comes out on Bandcamp in February 2027, with everyone named.</p>
+  <nav class="tabs">
+    <a href="./index.html">About</a>
+    <a href="./record.html">Record</a>
+    <a href="./take-part.html">Take part</a>
+    <a href="./upload.html" aria-current="page">Send files</a>
+    <a href="./rights.html">Rights</a>
+    <a href="./contributors.html">Contributors</a>
+  </nav>
+</header>
+
+<main>
+<h1>Send files</h1>
+
+<p class="lead">Step two. Files go straight to my own storage — there is no size limit, a 500 MB WAV is fine.</p>
+
+<div class="note">
+  <p><strong>Have we spoken yet?</strong> If not, <a href="./take-part.html">start there instead</a> — tell me what you have and I will send back a corpus map and a page of notation made for you. It takes two minutes and it makes the recording better.</p>
+  <p>If you already know what you are sending, carry on. This form is open to everyone.</p>
+</div>
+
+<p>Before you send: the <a href="./record.html">recording notes</a> take two minutes to read and decide whether a file is usable. The <a href="./rights.html">licence</a> is short and you are agreeing to it below.</p>
+
+<p>Instruments, objects, junk, voice, breath — all of it welcome, and object-made sound especially.</p>
+
+<form class="submit" id="form" novalidate>
+
+  <fieldset>
+    <legend>You</legend>
+
+    <label class="field">
+      <span class="label">Your name <span class="req">— required</span></span>
+      <span class="hint">Your legal name. Not published — it is what makes the permission mean something.</span>
+      <input type="text" name="legalName" required autocomplete="name">
+    </label>
+
+    <label class="field">
+      <span class="label">Credit name <span class="req">— required</span></span>
+      <span class="hint">How you want to be listed on the release. A pseudonym is completely fine.</span>
+      <input type="text" name="creditName" required>
+    </label>
+
+    <label class="field">
+      <span class="label">Email <span class="req">— required</span></span>
+      <span class="hint">So I can send you the notation, and the piece your sound ends up in.</span>
+      <input type="email" name="email" required autocomplete="email">
+    </label>
+
+    <label class="field">
+      <span class="label">Did we already speak?</span>
+      <span class="hint">Optional. If I sent you a reference or a notation page, mention it here so I can match things up.</span>
+      <input type="text" name="reference">
+    </label>
+
+    <label class="field">
+      <span class="label">Where you are</span>
+      <span class="hint">City and/or country, if you would like it in the credits.</span>
+      <input type="text" name="location">
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>The sound</legend>
+
+    <label class="field">
+      <span class="label">What is it? <span class="req">— required</span></span>
+      <span class="hint">The source and the technique, in a sentence or two. "Bowed cymbal, close mic" is plenty.</span>
+      <textarea name="describe" required></textarea>
+    </label>
+
+    <label class="field">
+      <span class="label">Does anything fade up out of silence?</span>
+      <span class="hint">Slow bows, rubbed rims, swells. They have no attack for the slicer to find, so I handle them differently.</span>
+      <select name="fadeIn">
+        <option value="">—</option>
+        <option>No, everything has a clear start</option>
+        <option>Yes, some of it is bowed or rubbed</option>
+        <option>Not sure</option>
+      </select>
+    </label>
+
+    <label class="field">
+      <span class="label">Files <span class="req">— required</span></span>
+      <span class="hint">WAV, AIFF or FLAC. Select as many as you like.</span>
+      <input type="file" name="files" id="files" multiple accept=".wav,.aif,.aiff,.flac,audio/wav,audio/x-wav,audio/aiff,audio/x-aiff,audio/flac">
+    </label>
+
+    <label class="field">
+      <span class="label">Anything else</span>
+      <textarea name="notes"></textarea>
+    </label>
+
+    <label class="check"><input type="checkbox" name="augmented">
+      <span>This involves an augmented or self-built instrument — sensors, pickups, preparations, feedback, motors. (A standing interest of mine; I may write back wanting to talk further.)</span></label>
+
+    <label class="check"><input type="checkbox" name="wantsNotation">
+      <span>I would like a page of notation written for me. (Entirely optional — most people send what they already do.)</span></label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Rights</legend>
+
+    <label class="check"><input type="checkbox" name="c1" required>
+      <span>I made this recording, and I have the right to license it.</span></label>
+    <label class="check"><input type="checkbox" name="c2" required>
+      <span>It contains no one else's copyrighted work.</span></label>
+    <label class="check"><input type="checkbox" name="c3" required>
+      <span>I agree to my credit name being published on the release.</span></label>
+    <label class="check"><input type="checkbox" name="c4" required>
+      <span>I have read and accept <a href="./rights.html">the licence</a>: I keep my copyright and grant a perpetual, non-exclusive, royalty-free licence to use and transform the recording. The album is Creative Commons and may be sold.</span></label>
+
+    <label class="check"><input type="checkbox" name="wantsPatcher">
+      <span>Send me the patcher and the technical detail.</span></label>
+  </fieldset>
+
+  <div id="turnstile-slot"></div>
+
+  <p style="margin-top:1.8rem">
+    <button class="btn" type="submit" id="go">Send</button>
+  </p>
+
+</form>
+
+<div id="status"></div>
+
+<noscript>
+  <div class="note">
+    <p>The upload form needs JavaScript. If you would rather not enable it, email your files to
+    <a href="mailto:okurtul@bgsu.edu">okurtul@bgsu.edu</a> and I will take it from there.</p>
+  </div>
+</noscript>
+
+<p class="small dim" style="margin-top:2rem">Your legal name and email are used for this project only, are never shared, and are deleted on request. Only your credit name is published.</p></main>
+
+<footer class="site">
+  <p>What the C*rp*s — an album by Ömer Kurtuluş, made with Somax2 (IRCAM).<br>
+  Questions: <a href="mailto:okurtul@bgsu.edu">okurtul@bgsu.edu</a></p>
+</footer>
+
+<script src="./upload.js"></script>
+</div>
+</body>
+</html>

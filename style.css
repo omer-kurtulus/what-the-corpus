@@ -1,0 +1,292 @@
+/* What the C*rp*s — black and white, nothing else.
+   No framework, no build step. Relative links throughout so the site works
+   from a GitHub Pages project path. */
+
+:root {
+  --bg: #ffffff;
+  --fg: #000000;
+  --dim: #595959;
+  --line: #c9c9c9;
+  --box: #f4f4f4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000000;
+    --fg: #ffffff;
+    --dim: #a0a0a0;
+    --line: #3a3a3a;
+    --box: #131313;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: 41rem;
+  margin: 0 auto;
+  padding: 0 1.25rem 6rem;
+}
+
+/* ---------- header ---------- */
+
+header.site {
+  border-bottom: 2px solid var(--fg);
+  margin-bottom: 2.5rem;
+  padding-top: 2.5rem;
+}
+
+.brand {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: inherit;
+  margin: 0 0 0.35rem;
+}
+
+.tagline {
+  margin: 0 0 1.4rem;
+  color: var(--dim);
+  font-size: 0.95rem;
+}
+
+nav.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.4rem;
+}
+
+nav.tabs a {
+  display: block;
+  padding: 0.5rem 0;
+  color: var(--dim);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+}
+
+nav.tabs a:hover { color: var(--fg); }
+
+nav.tabs a[aria-current="page"] {
+  color: var(--fg);
+  border-bottom-color: var(--fg);
+}
+
+/* ---------- text ---------- */
+
+h1 { font-size: 1.7rem; line-height: 1.25; margin: 0 0 1.2rem; }
+
+h2 {
+  font-size: 1.1rem;
+  margin: 2.6rem 0 0.8rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+}
+
+h3 { font-size: 0.95rem; margin: 1.8rem 0 0.4rem; }
+
+p, ul, ol { margin: 0 0 1.1rem; }
+ul, ol { padding-left: 1.3rem; }
+li { margin-bottom: 0.4rem; }
+
+a { color: inherit; }
+
+.lead { font-size: 1.1rem; }
+
+.dim { color: var(--dim); }
+
+.small { font-size: 0.9rem; }
+
+blockquote {
+  margin: 1.2rem 0;
+  padding: 0.9rem 1.1rem;
+  border-left: 3px solid var(--fg);
+  background: var(--box);
+  font-size: 0.95rem;
+}
+
+hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
+
+/* ---------- spec list ---------- */
+
+dl.spec { margin: 1.4rem 0; }
+
+dl.spec > div {
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--line);
+}
+
+dl.spec dt {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+dl.spec dd { margin: 0.25rem 0 0; }
+
+@media (min-width: 34rem) {
+  dl.spec > div { display: grid; grid-template-columns: 10rem 1fr; gap: 1rem; }
+  dl.spec dd { margin-top: 0; }
+}
+
+/* ---------- steps ---------- */
+
+ol.steps { list-style: none; padding: 0; counter-reset: s; }
+
+ol.steps li {
+  counter-increment: s;
+  padding: 0.85rem 0 0.85rem 3rem;
+  border-top: 1px solid var(--line);
+  position: relative;
+}
+
+ol.steps li::before {
+  content: counter(s, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0.85rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
+ol.steps b { display: block; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; }
+
+/* ---------- callout ---------- */
+
+.note {
+  border: 2px solid var(--fg);
+  padding: 1rem 1.1rem;
+  margin: 1.6rem 0;
+}
+
+.note p:last-child { margin-bottom: 0; }
+
+/* ---------- buttons / links ---------- */
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.3rem;
+  border: 2px solid var(--fg);
+  background: var(--fg);
+  color: var(--bg);
+  font: inherit;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover { background: var(--bg); color: var(--fg); }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.btn--ghost { background: var(--bg); color: var(--fg); }
+.btn--ghost:hover { background: var(--fg); color: var(--bg); }
+
+/* ---------- form ---------- */
+
+form.submit label.field { display: block; margin: 1.4rem 0 0; }
+
+form.submit .label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+form.submit .hint { display: block; color: var(--dim); font-size: 0.85rem; margin-bottom: 0.4rem; }
+
+form.submit input[type="text"],
+form.submit input[type="email"],
+form.submit input[type="url"],
+form.submit textarea,
+form.submit select {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  font: inherit;
+  color: var(--fg);
+  background: var(--bg);
+  border: 1px solid var(--fg);
+  border-radius: 0;
+}
+
+form.submit textarea { min-height: 6rem; resize: vertical; }
+
+form.submit input[type="file"] {
+  width: 100%;
+  padding: 0.9rem;
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--fg);
+  border: 2px dashed var(--fg);
+  background: var(--box);
+}
+
+form.submit .check {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  margin: 0.6rem 0;
+  font-size: 0.92rem;
+}
+
+form.submit .check input { margin-top: 0.35rem; flex: none; }
+
+fieldset { border: 1px solid var(--line); padding: 1rem 1.1rem; margin: 1.6rem 0 0; }
+legend { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 0 0.4rem; }
+
+.req { font-weight: 400; color: var(--dim); }
+
+/* ---------- upload progress ---------- */
+
+#status { margin-top: 1.6rem; }
+
+.file-row { border-top: 1px solid var(--line); padding: 0.6rem 0; font-size: 0.9rem; }
+
+.bar { height: 6px; background: var(--box); border: 1px solid var(--line); margin-top: 0.35rem; }
+.bar > span { display: block; height: 100%; background: var(--fg); width: 0; transition: width 150ms linear; }
+
+.ok::before { content: "\2713\00a0"; font-weight: 700; }
+.fail::before { content: "\2717\00a0"; font-weight: 700; }
+
+/* ---------- contributors ---------- */
+
+ul.people { list-style: none; padding: 0; }
+
+ul.people li {
+  border-top: 1px solid var(--line);
+  padding: 0.7rem 0;
+}
+
+ul.people b { font-weight: 700; }
+ul.people span { color: var(--dim); font-size: 0.9rem; }
+
+/* ---------- footer ---------- */
+
+footer.site {
+  border-top: 2px solid var(--fg);
+  margin-top: 4rem;
+  padding-top: 1.2rem;
+  font-size: 0.85rem;
+  color: var(--dim);
+}

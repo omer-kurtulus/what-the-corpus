@@ -1,0 +1,17 @@
+name = "what-the-corpus"
+main = "src/index.js"
+compatibility_date = "2026-08-01"
+
+# Contributed audio and the metadata JSON land here.
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "what-the-corpus"
+
+[vars]
+# Browsers that may call the endpoint. The site is served from GitHub Pages.
+ALLOWED_ORIGINS = "https://omer-kurtulus.github.io"
+
+# Secrets are NOT set here. Run these once:
+#   npx wrangler secret put SIGNING_SECRET     (any long random string)
+#   npx wrangler secret put TURNSTILE_SECRET   (optional; skips the check if unset)
+#   npx wrangler secret put NOTIFY_WEBHOOK     (optional; a Slack/Discord webhook)

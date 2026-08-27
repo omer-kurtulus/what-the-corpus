@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Take part — What the C*rp*s</title>
+<meta name="description" content="Tell me what you have and I will send you something to work from — a corpus map, a page of notation, or just a suggestion.">
+<link rel="stylesheet" href="./style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Crect x='6' y='14' width='4' height='4' fill='%23fff'/%3E%3Crect x='14' y='14' width='4' height='4' fill='%23fff'/%3E%3Crect x='22' y='14' width='4' height='4' fill='%23fff'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site">
+  <a class="brand" href="./index.html">What the C*rp*s</a>
+  <p class="tagline">An album built from recordings sent by other people. Send yours by 30 November 2026; the record comes out on Bandcamp in February 2027, with everyone named.</p>
+  <nav class="tabs">
+    <a href="./index.html">About</a>
+    <a href="./record.html">Record</a>
+    <a href="./take-part.html" aria-current="page">Take part</a>
+    <a href="./upload.html">Send files</a>
+    <a href="./rights.html">Rights</a>
+    <a href="./contributors.html">Contributors</a>
+  </nav>
+</header>
+
+<main>
+<h1>Take part</h1>
+
+<p class="lead">Tell me what you have. I write back with something made for you — where the corpus is thin, what would help, and a page of notation if you want one.</p>
+
+<p>This takes two minutes and there are no files yet. It is the step I would rather everyone went through, because a corpus assembled without any conversation ends up lopsided: forty people all send struck metal and nothing bows, nothing breathes, nothing scrapes. If I know what is out there I can point you at the gaps.</p>
+
+<p>It is also, frankly, the part I want. Making this with people rather than from an archive was the whole reason for the open call.</p>
+
+<form class="submit" id="reg" novalidate>
+
+  <label class="field">
+    <span class="label">Your name <span class="req">— required</span></span>
+    <input type="text" name="name" required autocomplete="name">
+  </label>
+
+  <label class="field">
+    <span class="label">Email <span class="req">— required</span></span>
+    <span class="hint">Where I write back. Usually within a few days.</span>
+    <input type="email" name="email" required autocomplete="email">
+  </label>
+
+  <label class="field">
+    <span class="label">Where you are</span>
+    <input type="text" name="location">
+  </label>
+
+  <label class="field">
+    <span class="label">What do you have? <span class="req">— required</span></span>
+    <span class="hint">Instruments, objects, junk, a room, a voice, a self-built thing. Rough is fine — "cello, a box of scrap metal, a bathroom with a long tail" tells me plenty.</span>
+    <textarea name="have" required></textarea>
+  </label>
+
+  <label class="field">
+    <span class="label">Anything you would like to try?</span>
+    <span class="hint">Leave it blank if you would rather I suggested something.</span>
+    <textarea name="tryout"></textarea>
+  </label>
+
+  <label class="check"><input type="checkbox" name="wantsNotation" checked>
+    <span>Send me a page of notation to work from.</span></label>
+
+  <label class="check"><input type="checkbox" name="augmented">
+    <span>I play an augmented or self-built instrument — sensors, pickups, preparations, feedback, motors. <span class="dim">(A standing interest of mine; expect a longer reply.)</span></span></label>
+
+  <label class="check"><input type="checkbox" name="wantsPatcher">
+    <span>Send me the Max patcher and the technical detail too.</span></label>
+
+  <div id="turnstile-slot"></div>
+
+  <p style="margin-top:1.8rem">
+    <button class="btn" type="submit" id="regGo">Send this</button>
+  </p>
+
+</form>
+
+<div id="regStatus"></div>
+
+<noscript>
+  <div class="note">
+    <p>This form needs JavaScript. Email me instead — <a href="mailto:okurtul@bgsu.edu">okurtul@bgsu.edu</a> — with what you have, and I will reply the same way.</p>
+  </div>
+</noscript>
+
+<h2>Already recorded something?</h2>
+
+<p>Then do not let me hold you up. <a href="./upload.html">Send it</a> — the conversation can happen afterwards just as well.</p>
+
+<p class="small dim" style="margin-top:2rem">Your name and email are used for this project only, are never shared, and are deleted on request.</p>
+</main>
+
+<footer class="site">
+  <p>What the C*rp*s — an album by Ömer Kurtuluş, made with Somax2 (IRCAM).<br>
+  Questions: <a href="mailto:okurtul@bgsu.edu">okurtul@bgsu.edu</a></p>
+</footer>
+
+<script src="./register.js"></script>
+</div>
+</body>
+</html>
