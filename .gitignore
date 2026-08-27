@@ -1,3 +1,7 @@
 node_modules/
 .DS_Store
 .wrangler/
+
+# Kisisel isleyis notlari: Cloudflare hesap kimligini iceriyor, repo ise herkese acik
+WORKFLOW.md
+WORKFLOW.pdf
