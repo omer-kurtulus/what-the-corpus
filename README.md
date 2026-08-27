@@ -4,10 +4,10 @@ Open call for an album built from contributed recordings, played through
 Somax2 (IRCAM). Deadline 30 November 2026; the record comes out on Bandcamp in
 February 2027 with every contributor named.
 
-Live at <https://omer-kurtulus.github.io/what-the-corpus/>
+Live at <https://omerkurtulus.com/what-the-corpus/>
 
 This is a standalone site. It is deliberately not part of the portfolio site
-at `omer-kurtulus.github.io` — no shared nav, no shared design, no cross-links.
+at `omerkurtulus.com` — no shared nav, no shared design, no cross-links.
 
 ## What is here
 
@@ -62,9 +62,9 @@ submissions/<id>/submission.json       metadata, written once every file lands
 ```
 
 The Worker is live at
-`https://what-the-corpus.what-the-corpus-worker.workers.dev` and the Turnstile
+`https://upload.omerkurtulus.com` and the Turnstile
 widget (`0x4AAAAAAEdqkpdzjcOvmb8K`, managed mode, locked to
-`omer-kurtulus.github.io`) is wired into both forms.
+`omerkurtulus.com`) is wired into both forms.
 
 Verified end to end on 27 August 2026: a 90 MB WAV went up in three parts and
 came back out of R2 with a matching SHA-256.

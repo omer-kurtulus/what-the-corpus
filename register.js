@@ -1,6 +1,6 @@
 /* What the C*rp*s — "Take part". No files here, so one small POST is enough. */
 
-const API = window.WTC_API || 'https://what-the-corpus.what-the-corpus-worker.workers.dev';
+const API = window.WTC_API || 'https://upload.omerkurtulus.com';
 
 /* A blocked request throws a bare TypeError("Failed to fetch") with no detail,
  * which is indistinguishable from the server being down. Ad blockers do block

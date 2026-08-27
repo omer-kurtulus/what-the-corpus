@@ -7,9 +7,17 @@ compatibility_date = "2026-08-01"
 binding = "BUCKET"
 bucket_name = "what-the-corpus"
 
+# On its own subdomain rather than workers.dev: ad blockers ship filters for
+# *.workers.dev, and a contributor whose blocker eats the endpoint just sees the
+# upload fail.
+[[routes]]
+pattern = "upload.omerkurtulus.com"
+custom_domain = true
+
 [vars]
-# Browsers that may call the endpoint. The site is served from GitHub Pages.
-ALLOWED_ORIGINS = "https://omer-kurtulus.github.io,http://localhost:8899,http://127.0.0.1:8899"
+# Browsers that may call the endpoint. The old github.io origin stays listed
+# because GitHub redirects rather than breaking old links.
+ALLOWED_ORIGINS = "https://omerkurtulus.com,https://www.omerkurtulus.com,https://omer-kurtulus.github.io,http://localhost:8899,http://127.0.0.1:8899"
 
 # Secrets are NOT set here. Run these once:
 #   npx wrangler secret put SIGNING_SECRET     (any long random string)
